@@ -30,6 +30,7 @@ const app = http.createServer((request, response) => {
   } else if (pathName === "/modify_process") {
     create.modify(request, response);
   } else if (pathName === "/delete") {
+    create.delete(queryData.id, response);
   } else {
     response.writeHead(404);
     response.end("Not Found");
